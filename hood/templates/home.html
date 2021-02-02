@@ -4,13 +4,13 @@
 {{block.super}}
 
 <div class="jumbotron"
-    style="background-image:url('https://res.cloudinary.com/zilfa/image/upload/v1612195999/convvvvvvvvvvvvv_cj5oxb.png');background-size: cover; height: 93vh; background-position: center;margin-top: -4px">
+    style="background-image:url('https://res.cloudinary.com/zilfa/image/upload/v1612293612/Kigali_Convention_Centre_December_1_2018_Courtesy_Raddison__CC_BY-SA_40_i8yna0.jpg');background-size: cover; height: 93vh; background-position: center;margin-top: -4px">
 
     <h1
-        style="color:yellow;font-family: 'Kaushan Script', cursive;font-size: 40px;margin-left: 12%;margin-top: 14%;letter-spacing: 1px;">
+        style="color:yellow;font-family: 'Kaushan Script', cursive;font-size: 40px;margin-left: 12%;margin-top: 3%;letter-spacing: 1px;">
         The Best Rwanda Neighbourhoods</h1>
-    <p><a style="color:rgba(255, 255, 0, 0.836);margin-left: 43%;font-family: 'Times New Roman', Times, serif;"
-            href="{% url 'addhood' %}"><span class="btn btn-outline-warning btn-sm">Fell Free to Add hoods</span></a>
+    <p><a style="color:rgba(255, 255, 0, 0.836);margin-left: 26%;font-family: 'Times New Roman', Times, serif;"
+            href="{% url 'addhood' %}"><span class="btn btn-outline-warning btn-sm">Add Other Hoods</span></a>
     <p>
 </div>
 
@@ -27,11 +27,10 @@
                         style="width: 25rem; height: 15rem;">
 
                     <div class="card-body">
-                        <p> <span>
-                                {{neighbourhood.hood_name}}</span>
-                            <span style="text-transform: capitalize;font-weight: bold;">| {{ neighbourhood.location }}</span>
+                        <p style="color: rgb(4, 11, 39); font-family: 'Times New Roman', Times, serif;font-weight: bold;font-size: 17px;"><i> {{ neighbourhood.hood_name }}</i>
+                            <span style="font-weight: bold; font-size: 17px;font-family: 'Kaushan Script', cursive;">| {{ neighbourhood.location }}</span>
                             <span style="float: right;"><a href="{%url 'detail' neighbourhood.id %}"><button
-                                        class="btn btn-primary btn-sm">Join Hood</button></a></span>
+                                        class="btn btn-primary btn-sm" style="background-color: rgb(4, 11, 39);">Join Hood</button></a></span>
                         </p>
                     </div>
                 </div>
