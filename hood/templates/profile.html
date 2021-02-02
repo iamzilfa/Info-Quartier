@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{% block content %}
+
+<br>
+<br>
+<br>
+<div class="container ">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 mt-4 prof mr-2 ml-2">
+            <img class="rounded-circle d-block mx-auto" src="{{ my_profile.profile_image.url }}"height="170px" width="200px">
+            <h5 class="text-center mt-3">{{my_profile.user}}</h5>
+            <p class="text-center">Bio: {{my_profile.bio}}</p>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
+
+{% endblock %}
