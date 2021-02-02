@@ -36,6 +36,7 @@ class NeighbourhoodTestClass(TestCase):
             self.new_neighbourhood.create_neigborhood()
             neighborhood=Neighbourhood.objects.all()
             self.assertTrue(len(neighborhood)>0)
+            
 
         def test_delete_neighbourhood(self):
             self.new_neighbourhood.create_neigborhood()
