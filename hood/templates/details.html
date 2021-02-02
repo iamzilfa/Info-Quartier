@@ -1,0 +1,69 @@
+{%extends 'base.html'%}
+{%block content%}
+{% load bootstrap4 %}
+{% load static%}
+
+<div class="container" style="margin-top: 3%;">
+  <div class="row">
+
+    <div class="col-md-5">
+      <div class="card mb-4 shadow-sm">
+
+        <img src="{{ neighbourhood.hood_image.url }}" alt="image" style="width:100%">
+
+        <div class="card-body">
+
+          <p style="color: rgb(7, 32, 112);"><span><i> {{ neighbourhood.hood_name }} </i></span>
+            <span style="font-weight: bold;">| {{ neighbourhood.location }}</span>
+          </p>
+
+          <p style="font-family: 'Times New Roman', Times, serif;">{{ neighbourhood.description }}</p>
+
+          <hr style=>
+          <div class="foot">
+            <p><span class="text-info">Police Tell</span>&nbsp;<strong>{{ neighbourhood.police_number}}</strong> |
+              <span class="text-info">Hospital Tell</span> <strong>{{ neighbourhood.health_tell}}</strong>
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-1"></div>
+
+    <div class="col-md-3" style="border-right: 1px solid rgb(214, 208, 208);">
+      <p><a href="{%url 'new_business' pk=neighbourhood.id %}" class="btn btn-primary btn-sm" style="background-color: rgb(7, 32, 112);">Add Business</a></p>
+      <hr>
+      {%if businesses%}
+      {%for business in businesses%}
+
+      <p><b style="font-family: 'Times New Roman', Times, serif;">Name:</b> <span style="font-family: 'Kalam', cursive;"> {{business.business_name}}</span></p>
+      <p><b style="font-family: 'Times New Roman', Times, serif;">About:</b><span style="font-family: 'Kalam', cursive;"> {{business.description}}</span></p>
+      <p><b style="font-family: 'Times New Roman', Times, serif;">Email:</b><span style="font-family: 'Kalam', cursive;"> {{business.email}}</span></p>
+      <hr>
+      {%endfor%}
+      {%else%}
+      <p style="font-family: 'Kalam', cursive;">No business available at the moment</b></p>
+      {%endif%}
+    </div>
+
+    <div class="col-md-3">
+        <p><a href="{%url 'new_post' pk=neighbourhood.id %}" class="btn btn-primary btn-sm" style="background-color: rgb(7, 32, 112);">
+            Add Post
+          </a></p>
+        <hr>
+        {%if posts%}
+        {%for post in posts%}
+        <p><strong style="font-family: 'Times New Roman', Times, serif;">{{post.user.username}}: </strong> <span style="font-family: 'Kalam', cursive;">{{post.post}}</span></p>
+        {%endfor%}
+        {%else%}
+        <p style="font-family: 'Kalam', cursive;">No post available at the moment</p>
+        {%endif%}
+        <br>
+    </div>
+  </div>
+</div>
+
+
+{%endblock%}
