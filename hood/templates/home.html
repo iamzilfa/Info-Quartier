@@ -1,1 +1,43 @@
-<h1> The App Is Working Perfectly</h1>
+{%extends 'base.html'%}
+{% load static %}
+{% block content %}
+{{block.super}}
+
+<div class="jumbotron"
+    style="background-image:url('https://res.cloudinary.com/zilfa/image/upload/v1612195999/convvvvvvvvvvvvv_cj5oxb.png');background-size: cover; height: 93vh; background-position: center;margin-top: -4px">
+
+    <h1
+        style="color:yellow;font-family: 'Kaushan Script', cursive;font-size: 40px;margin-left: 12%;margin-top: 14%;letter-spacing: 1px;">
+        The Best Rwanda Neighbourhoods</h1>
+    <p><a style="color:rgba(255, 255, 0, 0.836);margin-left: 43%;font-family: 'Times New Roman', Times, serif;"
+            href="{% url 'addhood' %}"><span class="btn btn-outline-warning btn-sm">Fell Free to Add hoods</span></a>
+    <p>
+</div>
+
+<div style="margin-top: -0.83cm;">
+    <div class="container" style="padding-top: 5%;">
+
+        <div class="row">
+            {% for neighbourhood in neighbourhoods %}
+            <div class="col-md-4">
+
+                <div class="card mb-4 shadow-lg">
+                    <img alt="Card image cap" class="card-img-top img-fluid" src="{{neighbourhood.hood_image.url}}"
+                        style="width: 25rem; height: 15rem;">
+
+                    <div class="card-body">
+                        <p> <span>
+                                {{neighbourhood.hood_name}}</span>
+                            <span style="text-transform: capitalize;font-weight: bold;">| {{ neighbourhood.location }}</span>
+                            <span style="float: right;"><a href="{%url 'detail' neighbourhood.id %}"><button
+                                        class="btn btn-primary btn-sm">Join Hood</button></a></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
