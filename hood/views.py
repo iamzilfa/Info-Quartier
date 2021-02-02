@@ -56,6 +56,7 @@ def neighbourhood_details(request,neighbourhood_id):
     return render(request,'details.html',{'neighbourhood':neighbourhood,'businesses':businesses,'posts':posts})
 
 
+
 def new_business(request,pk):
     current_user = request.user
     neighborhood = get_object_or_404(Neighbourhood,pk=pk)
