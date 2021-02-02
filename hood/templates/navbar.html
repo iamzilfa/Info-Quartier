@@ -1,15 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-white static-top"
-  style="background-color: rgb(7, 32, 112);">
+  style="background-color: rgb(4, 11, 39);">
   <div class="container-fluid">
 
     <div>
-      <a class="navbar-brand" href="{%url 'home'%}" style="color: yellow;font-family: 'Felipa', cursive;font-weight: bold;font-size: 25px;">Quartier
+      <a class="navbar-brand" href="{%url 'home'%}" style="color: yellow;font-family: 'Felipa', cursive;font-weight: bold;font-size: 22px;">Quartier
       </a>
     </div>
 
     <form action="{% url 'search' %}" class="form-inline my-2 my-lg-0">
       <input type="text" class="input-sm form-control" name="project_name" placeholder="Search"
-      style="border: 0px; border-bottom: 2px solid yellow; outline: none;background-color: transparent;">        
+      style="border: 0px; border-bottom: 2px solid yellow; outline: none;background-color: transparent;">
+        
     </form>
 
     <div>
@@ -20,12 +21,12 @@
         <li class="nav-item">
           <a class="nav-link" href="{%url 'myprofile'%}"
             style="color:yellow;"><i
-              class="fas fa-user"></i> <span style="font-family: 'Times New Roman', Times, serif;font-size: 17px;font-weight: bold;">{{user.username}}</span> </a>
+              class="fas fa-user fa-xs"></i> <span style="font-family: 'Times New Roman', Times, serif;font-size: 15px;font-weight: bold;">{{user.username}}</span> </a>
         </li>
 
         <ul class="dropdown">
           <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-expanded="false"
-            style="color: grey; font-family: 'Times New Roman', Times, serif;font-size: 17px;color:yellow;font-weight: bold;">Account
+            style="color: grey; font-family: 'Times New Roman', Times, serif;font-size: 15px;color:yellow;font-weight: bold;">Account
           </a>
 
           <ul class="dropdown-menu" role="menu" style="font-family: 'Times New Roman', Times, serif;">
