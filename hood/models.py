@@ -54,6 +54,7 @@ class Business(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     neighborhood = models.ForeignKey(Neighbourhood, on_delete=models.CASCADE)
     email = models.EmailField()
+    
 
     def create_business(self):
         self.save()
