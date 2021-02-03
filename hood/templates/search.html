@@ -1,7 +1,7 @@
 {%extends 'base.html'%}
 {% block content %}
 
-<div class="container" style="font-family:'Times New Roman', Times, serif;margin-top:7%;">
+<div class="container" style="font-family:'Times New Roman', Times, serif;margin-top:5%;">
   <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
@@ -29,7 +29,8 @@
 
           <div class="card-body">
 
-            <span style="font-weight: bold;font-size: 18px;">{{userpro.location}}</span>
+            <p style="color: rgb(4, 11, 39); font-family: 'Times New Roman', Times, serif;font-weight: bold;font-size: 17px;"><i> {{ userpro.hood_name }}</i>
+              <span style="font-weight: bold; font-size: 17px;font-family: 'Kaushan Script', cursive;">| {{ userpro.location }}</span></p>
           </div>
         </div>
 
