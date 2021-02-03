@@ -13,6 +13,7 @@ class NeighbourhoodForm(forms.ModelForm):
     class Meta:
         model=Neighbourhood
         fields = ['hood_name','location','hood_image','description','health_tell','police_number']
+        
 
 class NewBusinessForm(forms.ModelForm):
     class Meta:
