@@ -15,6 +15,29 @@
         </div>
         <div class="col-md-3"></div>
     </div>
+    <hr>
+</div>
+
+<br>
+<br>
+
+<div class="container">
+    <h1 class="text-center" style="font-family: 'Times New Roman', Times, serif;"> Neighbourhoods</h1>
+    <br>
+    <br>
+    <div class="row">
+        {% for user in my_hoods %}
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img alt="Card image cap" class="card-img-top img-fluid" src="{{user.hood_image.url}}" style="width: 25rem; height: 15rem;">
+                <div class="card-body">
+                    <p style="color: rgb(4, 11, 39); font-family: 'Times New Roman', Times, serif;font-weight: bold;font-size: 17px;"><i> {{ user.hood_name }}</i>
+                        <span style="font-weight: bold; font-size: 17px;font-family: 'Kaushan Script', cursive;">| {{ user.location }}</span></p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 
 

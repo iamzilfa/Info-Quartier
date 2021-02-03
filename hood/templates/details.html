@@ -22,8 +22,8 @@
 
           <hr style=>
           <div class="foot">
-            <p><span class="text-info">Police Tell</span>&nbsp;<strong>{{ neighbourhood.police_number}}</strong> |
-              <span class="text-info">Hospital Tell</span> <strong>{{ neighbourhood.health_tell}}</strong>
+            <p><span class="text-primary">Police Tell</span>&nbsp;<strong>{{ neighbourhood.police_number}}</strong> |
+              <span class="text-primary">Hospital Tell</span> <strong>{{ neighbourhood.health_tell}}</strong>
             </p>
 
           </div>
@@ -57,11 +57,11 @@
         {%if posts%}
         {%for post in posts%}
         <p><strong style="font-family: 'Times New Roman', Times, serif;">{{post.user.username}}: </strong> <span style="font-family: 'Kalam', cursive;">{{post.post}}</span></p>
+       <hr>
         {%endfor%}
         {%else%}
         <p style="font-family: 'Kalam', cursive;">No post available at the moment</p>
         {%endif%}
-        <br>
     </div>
   </div>
 </div>
