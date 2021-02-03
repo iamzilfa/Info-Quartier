@@ -37,7 +37,7 @@ An application that allows users  to be in the loop about everything happening i
 ## Support and contact details
 If anyone need support concerning my project or anything related, just reach out to zilcyam@gmail.com
  
-<!-- [Here is the Link](  https://zilfawards.herokuapp.com/ "Quartier") -->
+[Here is the Link](  https://zilfahood.herokuapp.com/ "Quartier")
 
 ### License
 
