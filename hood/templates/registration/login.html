@@ -18,7 +18,7 @@
             {% bootstrap_form form%}
 
             <div class="form-group">
-              <input type="submit" class="btn btn-primary btn-sm" value="Login">
+              <input type="submit" class="btn  btn-sm" style="background-color: rgb(4, 11, 39);color: white;" value="Login">
             </div>
 
             <input type="hidden" name="next" value="{{next}}">
@@ -27,7 +27,7 @@
           {% if form.errors %}
           <p> Password or Username is incorrect </p>
           {% endif %}
-          <p>Don't have an account? <a id="sign" href="/accounts/register/"> Sign Up</a></p>
+          <p style="font-family: 'Times New Roman', Times, serif;">Don't have an account? <a id="sign" href="/accounts/register/"> Sign Up</a></p>
         </div>
       </div>
     </div>
